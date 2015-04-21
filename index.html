@@ -1,0 +1,32 @@
+<html>
+<head>
+  <title> Fun with Handlebars</title>
+
+  <script charset="utf-8" type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+  <script charset="utf-8" type="text/javascript" src="bower_components/handlebars/handlebars.js"></script>
+  <script charset="utf-8" type="text/javascript" src="main.js"></script>
+</head>
+
+<body>
+  <div class="content">
+    <div class ="subreddit">
+      <script id="reddit-template" type="text/x-handlebars-template">
+        {{#each this }}
+        <h4><a href={{data.url}}>{{data.title}}</a></h4>
+        <span class="upvote">
+          Upvotes: {{data.ups}}
+        </span><br>
+        <span class="downvote">
+          Downvotes: {{data.downs}}
+        </span><br>
+        <span class="author">
+          Author: {{data.author}}
+        </span>
+        <br>
+        <br>
+        {{/each}}
+      </div>
+    </div>
+  </script>
+</body>
+</html>
